@@ -1,4 +1,4 @@
-.screen-hero {    
+.hero-section {    
   background: url(../img/header-background.jpg) center center / cover no-repeat;
 }
 .hero__menu {
@@ -7,15 +7,15 @@
   justify-content: space-between;  
   padding-top: 12px;
 }
-.hero__menu__container {
+.hero__menu-container {
   display: flex;   
   align-items: center;
   margin-top:-5px;    
 }
-.hero__menu__navigation {
+.hero__navigation {
   margin-right: 15px;
 }
-.hero__menu__list {
+.hero__list {
   display: flex;   
   align-items: center;
   padding: 0;  
@@ -41,7 +41,7 @@
     }
   }
 }
-.hero__menu__link {
+.hero__link {
   font-size: 13px;
   font-family: 'Ubuntu Medium';
   color: #fff;
@@ -56,13 +56,13 @@
   display: flex;
   align-items: center;  
 }
-.hero_image__burger {
+.hero__burger {
   margin: -8px 10px 0 20px;
 }
 .hero__text {
   margin-top: 70px;
 }
-.hero__text__title2 {
+.hero__title2 {
   font-family: 'Lifehack-Medium';
   font-size: 63px;
   color: #fff;  

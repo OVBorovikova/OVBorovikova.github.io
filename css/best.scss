@@ -1,4 +1,4 @@
-.section-best {
+.best-section {
   background: url(../img/s2-background.jpg) center center / cover no-repeat;
 }
 .best__title {
@@ -19,13 +19,13 @@
     margin-right:0;
   }
 }
-.best__item__title {
+.best__title {
   margin: 27px 0 13px;
   font-family: 'Lifehack-Medium';
   font-size: 24px;  
   line-height: 1.2;
 }
-.best__item__desc {
+.best__desc {
   font-family: 'Ubuntu Light';
   font-size: 14px;
   line-height: 1.75;  

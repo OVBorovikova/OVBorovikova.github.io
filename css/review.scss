@@ -1,12 +1,12 @@
-.section-review {
+.review-section {
   background-color: black;  
 }
-.review__list {
+.review-list {
   display: flex;
   flex-wrap: wrap;
   height: 100%; 
 }
-.review__item {
+.review-list__item {
   width: 25%;
   height: 50%;  
   position: relative;
@@ -15,13 +15,13 @@
   filter: grayscale(100%);
 
   &:hover {
-    .review__item__hover {
+    .review-list__hover {
       opacity: 1;
       transform: scale(1);
     }
   }
 }
-.review__item__hover {
+.review-list__hover {
   position: absolute;
   top:0;
   right: 0;
@@ -32,12 +32,12 @@
   padding: 50px 20px;   
   transform: scale(.8);
 }
-.review__item__name {
+.review-list__name {
   font-size: 14px;
   font-family: 'Gagalin-Regular';
   margin-bottom: 30px;  
 }
-.review__item__text {
+.review-list__text {
   margin-bottom: 20px;
   p {
     font-family: 'Ubuntu Light';

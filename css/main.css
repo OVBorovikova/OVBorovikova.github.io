@@ -425,7 +425,7 @@ ul {
     margin-bottom: 50px;
     text-align: center; }
 
-.screen-hero {
+.hero-section {
   background: url(../img/header-background.jpg) center center/cover no-repeat; }
 
 .hero__menu {
@@ -440,7 +440,7 @@ ul {
   justify-content: space-between;
   padding-top: 12px; }
 
-.hero__menu__container {
+.hero__menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,10 +449,10 @@ ul {
   align-items: center;
   margin-top: -5px; }
 
-.hero__menu__navigation {
+.hero__navigation {
   margin-right: 15px; }
 
-.hero__menu__list {
+.hero__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,24 +461,24 @@ ul {
   align-items: center;
   padding: 0;
   list-style-type: none; }
-  .hero__menu__list li {
+  .hero__list li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .hero__menu__list li:after {
+    .hero__list li:after {
       content: '';
       width: 5px;
       height: 5px;
       margin: 0 15px;
       background-color: #fff;
       border-radius: 50%; }
-    .hero__menu__list li:last-child:after {
+    .hero__list li:last-child:after {
       display: none; }
 
-.hero__menu__link {
+.hero__link {
   font-size: 13px;
   font-family: 'Ubuntu Medium';
   color: #fff;
@@ -501,18 +501,18 @@ ul {
   -ms-flex-align: center;
   align-items: center; }
 
-.hero_image__burger {
+.hero__burger {
   margin: -8px 10px 0 20px; }
 
 .hero__text {
   margin-top: 70px; }
 
-.hero__text__title2 {
+.hero__title2 {
   font-family: 'Lifehack-Medium';
   font-size: 63px;
   color: #fff; }
 
-.section-best {
+.best-section {
   background: url(../img/s2-background.jpg) center center/cover no-repeat; }
 
 .best__title {
@@ -533,21 +533,21 @@ ul {
   .best__item:last-child {
     margin-right: 0; }
 
-.best__item__title {
+.best__title {
   margin: 27px 0 13px;
   font-family: 'Lifehack-Medium';
   font-size: 24px;
   line-height: 1.2; }
 
-.best__item__desc {
+.best__desc {
   font-family: 'Ubuntu Light';
   font-size: 14px;
   line-height: 1.75; }
 
-.section-review {
+.review-section {
   background-color: black; }
 
-.review__list {
+.review-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,7 +555,7 @@ ul {
   flex-wrap: wrap;
   height: 100%; }
 
-.review__item {
+.review-list__item {
   width: 25%;
   height: 50%;
   position: relative;
@@ -563,13 +563,13 @@ ul {
   background: center center / cover no-repeat;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
-  .review__item:hover .review__item__hover {
+  .review-list__item:hover .review-list__hover {
     opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
 
-.review__item__hover {
+.review-list__hover {
   position: absolute;
   top: 0;
   right: 0;
@@ -582,14 +582,14 @@ ul {
   -ms-transform: scale(0.8);
   transform: scale(0.8); }
 
-.review__item__name {
+.review-list__name {
   font-size: 14px;
   font-family: 'Gagalin-Regular';
   margin-bottom: 30px; }
 
-.review__item__text {
+.review-list__text {
   margin-bottom: 20px; }
-  .review__item__text p {
+  .review-list__text p {
     font-family: 'Ubuntu Light';
     line-height: 1.6; }
 
