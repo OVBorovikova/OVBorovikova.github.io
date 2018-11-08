@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+}
+body {
+  font-family: 'Ubuntu Medium', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: $darkgray;
+  background-color:#f2f2f2;
+}
+.section {
+  height: 100vh;
+  min-height: 650px;
+}
+.container {
+  width: 940px;  
+  height: 100%;
+  margin: 0 auto;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  &_without-align {    
+    justify-content: initial;
+  }
+}
+* {
+  box-sizing: border-box
+}
+h1, h2, h3 {
+  margin: 0;
+  font-weight: normal;   
+}
+p {
+  margin: 0;
+  padding: 0;  
+}
+ul {
+  margin: 0;
+  padding: 0;
+  
+  li {
+    list-style: none;
+  }
+}
+.main-arrow {
+  position: absolute;    
+  bottom: 0;
+  margin-bottom: 40px;
+  left:0;
+  right:0;  
+  cursor: pointer;  
+}
+.main-arrow img {
+  display: block;
+  margin: 0 auto;
+}
