@@ -440,7 +440,7 @@ ul {
   justify-content: space-between;
   padding-top: 12px; }
 
-.hero__container {
+.hero__menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,7 +547,7 @@ ul {
 .review-section {
   background-color: black; }
 
-.review-list__list {
+.review-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
