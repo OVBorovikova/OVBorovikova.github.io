@@ -1,0 +1,47 @@
+.review-section {
+  background-color: black;  
+}
+.review-list__list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%; 
+}
+.review-list__item {
+  width: 25%;
+  height: 50%;  
+  position: relative;
+  color: #fff;
+  background: center center / cover no-repeat;
+  filter: grayscale(100%);
+
+  &:hover {
+    .review-list__hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+.review-list__hover {
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left:0;  
+  background: rgba($color: #000000, $alpha: .5);
+  opacity: 0;  
+  padding: 50px 20px;   
+  transform: scale(.8);
+}
+.review-list__name {
+  font-size: 14px;
+  font-family: 'Gagalin-Regular';
+  margin-bottom: 30px;  
+}
+.review-list__text {
+  margin-bottom: 20px;
+  p {
+    font-family: 'Ubuntu Light';
+    line-height: 1.6;
+  }
+}
+
