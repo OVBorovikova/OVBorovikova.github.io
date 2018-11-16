@@ -14,6 +14,11 @@
   background: center center / cover no-repeat;
   filter: grayscale(100%);
 
+  @include tablets {
+    width: 50%;
+    height: 25%;;
+  }
+
   &:hover {
     .review-list__hover {
       opacity: 1;
@@ -29,19 +34,31 @@
   left:0;  
   background: rgba($color: #000000, $alpha: .5);
   opacity: 0;  
-  padding: 50px 20px;   
+  padding: rem(50px) rem(20px);   
   transform: scale(.8);
+ 
+  @include tablets {
+    text-align: center;
+  }
 }
 .review-list__name {
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: 'Gagalin-Regular';
-  margin-bottom: 30px;  
+  margin-bottom: rem(30px); 
+  
+  @include phones {
+   font-size: rem(24px);
+  }
 }
 .review-list__text {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   p {
     font-family: 'Ubuntu Light';
     line-height: 1.6;
   }
+
+  @include phones {
+    display: none;
+   }
 }
 

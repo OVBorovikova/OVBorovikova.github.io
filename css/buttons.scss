@@ -7,11 +7,11 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: #e45028;
+  background-color: $red;
 }
 
 .button_red:hover {
-  background-color: #c1401e;
+  background-color: $darkred;
 }
 
 .button_black {
@@ -20,4 +20,28 @@
   &:hover {
     background-color: #1f2122;
   }
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;  
+
+  &:active, &:focus {
+    outline: none;
+    border: 0;
+  }
+}
+
+.form__line button[type="submit"] {
+  margin-right: 20px;
+}
+
+.form__line button[type="reset"] {
+  background-color: transparent;
+  font-family: 'Ubuntu Light';
+  color: #fff;
 }

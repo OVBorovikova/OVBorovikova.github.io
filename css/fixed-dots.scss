@@ -2,8 +2,12 @@
   position: fixed;
   top:0;
   right:0;  
-  margin-top: 95px;
-  margin-right: 55px;
+  margin-top: rem(95px);
+  margin-right: rem(55px);
+
+  @include tablets {
+    display: none;
+  }
 }
 .fixed-dots__list {
   display: block;
@@ -12,15 +16,15 @@
 
   li {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
   }
 
   a {
     font-size: 0;
     line-height: 0;
     display: block;
-    width: 6px;
-    height: 6px;    
+    width: rem(6px);
+    height: rem(6px);    
     padding: 0;
     background-color: #fff;
     border-radius: 50%;
@@ -33,11 +37,11 @@
       content: '';
       display: block;
       position: absolute;
-      width: 14px;
-      height: 14px;
-      margin: -5px 0 0 -5px;
+      width: rem(14px);
+      height: rem(14px);
+      margin: rem(-5px) 0 0 rem(-5px);
       border-radius: 50%;
-      border: 1px solid #fff;
+      border: rem(1px) solid #fff;
     }
   }
 }

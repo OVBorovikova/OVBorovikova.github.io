@@ -1,0 +1,124 @@
+.team-section {
+  background: url(../img/team-background.jpg) center center / cover no-repeat;
+  position: relative;
+
+  @include tablets {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.team__block {
+  position: absolute;
+  top:0;
+  right:0;
+  width: rem(540px);
+  height: 100%;
+  background: rgba($color: $darkgray, $alpha: .93);
+  
+  @include tablets {
+    width: 100%;
+  }
+}
+.team__content {
+  padding: rem(100px);
+}
+.team__accordeon {
+  margin-top: rem(48px);
+
+  @include phones {
+    margin-top: rem(30px);
+    margin-left: rem(20px);
+  }
+}
+.team__item {
+  margin-bottom: rem(37px);
+  padding-left: rem(17px);
+
+  @include tablets {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    border: rem(5px) solid transparent;	
+    border-top: rem(7px) solid $yellow;
+    margin-top:rem(5px);
+    margin-left: rem(-20px);
+    cursor: pointer;
+    text-align: leftж
+  }
+
+  &_active {
+    color: $yellow;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border: rem(5px) solid transparent;	
+      border-bottom: rem(7px) solid $yellow;
+      margin-top: rem(-2px);
+      margin-left: rem(-20px);
+      ccursor: pointer;
+    }    
+    .team__name {
+      color:$yellow;
+    }
+    .team__info {
+      padding: rem(15px) 0 rem(5px);
+      height: 100%;
+      overflow: visible;
+    }
+  }
+}
+.team__name {
+  font-family: 'Gagalin-Regular';
+  color:#fff;
+  text-transform: uppercase;
+  position: relative;  
+  cursor: pointer;
+
+  @include tablets {
+    font-size: rem(24px);
+    display: inline-block;
+  }
+}
+.team__info {
+  display: flex;
+  align-content: space-between;
+  height: 0;
+  overflow: hidden;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+.team__photo {
+  width:rem(100px);
+  min-width: rem(100px);
+  height: rem(100px);
+  border-radius: rem(50px);
+  margin-right: rem(15px);
+  background: center center / cover no-repeat;
+
+  @include tablets {
+    margin: 0 auto rem(20px);
+  }
+}
+.team__job {
+  margin-bottom: rem(15px);
+  font-family: 'Ubuntu Bold';
+  color:#fff;
+}
+.team__quote {
+  font-family: 'Ubuntu Light';
+  color:#fff;
+  line-height: 1.75;
+}

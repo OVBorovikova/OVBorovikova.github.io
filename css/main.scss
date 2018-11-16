@@ -1,9 +1,18 @@
 // colors
 $yellow: #f9b43b;
 $darkgray: #2f3234;
+$red: #e45028;
+$darkred: #c1401e;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
 
 //normalize
 @import "normalize.scss";
+
+//media
+@import "media.scss";
 
 // setups
 @import "layouts.scss";
@@ -14,5 +23,9 @@ $darkgray: #2f3234;
 //blocks
 @import "hero.scss";
 @import "best.scss";
+@import "team.scss";
+@import "menu.scss";
 @import "review.scss";
+@import "order.scss";
+@import "contacts.scss";
 @import "fixed-dots.scss";

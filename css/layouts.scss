@@ -1,9 +1,18 @@
-html, body {
+html {
   height: 100%;
+  font-size: 16px;
+
+  @include tablets {
+    font-size:16px;
+  }
+
+  @include phones {
+    font-size:16px;
+  }
 }
 body {
   font-family: 'Ubuntu Medium', sans-serif;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: normal;
   line-height: 1;
   color: $darkgray;
@@ -11,10 +20,11 @@ body {
 }
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 .container {
-  width: 940px;  
+  width: 100%;
+  max-width: 940px;  
   height: 100%;
   margin: 0 auto;  
   display: flex;
@@ -24,6 +34,18 @@ body {
   &_without-align {    
     justify-content: initial;
   }
+
+  @include tablets {
+    padding: 0 20px;
+  }
+
+  @include phones {
+    padding: 0 10px;
+  }
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
 }
 * {
   box-sizing: border-box
@@ -47,12 +69,17 @@ ul {
 .main-arrow {
   position: absolute;    
   bottom: 0;
-  margin-bottom: 40px;
+  margin: 0 auto rem(40px);
   left:0;
   right:0;  
+  width: 29px;
+  height:14px;
   cursor: pointer;  
 }
-.main-arrow img {
-  display: block;
-  margin: 0 auto;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
+
