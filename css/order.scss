@@ -1,28 +1,23 @@
 .order-section {
   background: url(../img/order-background.jpg) center center / cover no-repeat;
+  font-size: 14px;
 
   .container {
     width: 100%;
     max-width:960px;
   }
-
   .title {
-    margin-bottom: rem(50px);
-
-    @include phones {
-      margin-bottom: rem(30px);
-    }
-  }
-  
+    margin-bottom: rem(41px);
+  }  
 }
 
 .order-form {
-  display: flex;  
-  
+  display: flex;    
   @include tablets {
     flex-direction: column;
   }
 }
+
 .form__column {
   width: 50%;
   padding: 0 rem(10px); 
@@ -38,45 +33,47 @@
   display: flex;
 }
 .form__block {
-  margin-bottom: rem(20px);
-  margin-right:rem(20px);  
+  margin-bottom: 20px;
+  margin-right:rem(20px); 
+  width: 100%;
 
   &:last-child {
     margin-right:0;    
   }
 }
-.order-form label {
+.form__block {
   width: 100%;
 }
 .order-form textarea {
-  height: rem(110px);
+  height: 110px;
 }
 .order-form input, 
 .order-form textarea {
   width: 100%;
-  border: rem(1px) solid #fff;
-  border-radius: rem(5px);
-  font-family: 'Ubuntu Light';
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-weight: 300;
   color: $darkgray;
-	padding: rem(8px) rem(20px);
+	padding: 8px 20px;
 	background: #fff;
   
   &:focus {
     outline: none;
-    border: rem(1px) solid $yellow;
+    border: 1px solid $yellow;
   }
 }
 
 .form__block-title {
-  font-family: 'Ubuntu Light';
+  display: block;
+  font-weight: 300;
   color: #fff;
-  margin-bottom: rem(8px);  
-
+  margin-bottom: 8px;  
+  
   &_radio {
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 0;
-    margin-left: rem(8px);   
+    margin-left: 8px;   
   }
 }
 
@@ -86,36 +83,53 @@ input[type="radio"], input[type="checkbox"]  {
 .form__line .form__block_radio {
   width: auto;
   cursor: pointer;
-  margin-right: rem(20px);
+  margin-right: 20px;
+
+  @include phones {
+    margin-right: 7px;  
+  }
+
+  &:last-child {
+    @include phones {
+      margin-left: 7px;
+      margin-right: 0;  
+    }
+  }
 }
 .form__radio-title {
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 0;
-  margin-left: rem(8px);
+  margin-left: 8px;
 }
 .form__new-radio {
   display: inline-block;
   vertical-align: middle;
-  width: rem(15px);
-  height: rem(15px);
+  width: 15px;
+  height: 15px;
   background-color: #fff;
   border-radius: 50%;
   position: relative;
 }
 .form__line_radio {
-  margin-top: rem(-5px);
-  margin-bottom: rem(7px);
+  margin-top: -5px;
+  margin-bottom: 7px;
+
+  @include phones {
+    justify-content: center;
+    margin-bottom: 20px;
+
+  } 
 }
 
 .form__new-radio:after {
   content: '';
   display: block;
-  width: rem(7px);
-  height: rem(7px);
+  width: 7px;
+  height: 7px;
   position: absolute;
-  top: rem(4px);
-  left: rem(4px);
+  top: 4px;
+  left: 4px;
   background-color: $red;
   border-radius: 50%;  
   opacity: 0;
@@ -124,18 +138,24 @@ input[type="radio"], input[type="checkbox"]  {
 input[type="radio"]:checked + .form__new-radio:after {
   opacity: 1;
 }
+
+.form__line_checkbox {
+  @include phones {
+    text-align: center;
+  }
+}
 .form__block_checkbox {
   cursor: pointer;
 
   @include tablets {
-    margin-bottom: rem(45px);
+    margin-bottom: 43px;
   } 
 }
 .form__new-checkbox {
   display: inline-block;
   vertical-align: middle;
-  width: rem(15px);
-  height: rem(15px);
+  width: 15px;
+  height: 15px;
   background-color: #fff;
   position: relative;
 }
@@ -143,13 +163,13 @@ input[type="radio"]:checked + .form__new-radio:after {
 .form__new-checkbox:after {
   content: '';
   display: block;
-  width: rem(9px);
-  height: rem(5px);
+  width: 9px;
+  height: 5px;
   position: absolute;
-  top: rem(2px);
-  left: rem(2px);
-  border-left: rem(2px) solid $red;
-  border-bottom: rem(2px) solid $red;  
+  top: 2px;
+  left: 2px;
+  border-left: 2px solid $red;
+  border-bottom: 2px solid $red;  
   transform: rotate(-45deg);  
   opacity: 0;
 }
@@ -167,5 +187,16 @@ input[type="checkbox"]:checked + .form__new-checkbox:after {
 .form__floor {
   @include phones {
     display: none;
+  } 
+}
+
+.form__block_textarea {
+  @include phones {
+    margin-bottom: 40px;
+  } 
+}
+.form__line_btn {
+  @include phones {
+    justify-content: center;
   } 
 }

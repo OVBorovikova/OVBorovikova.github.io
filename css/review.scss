@@ -43,22 +43,22 @@
 }
 .review-list__name {
   font-size: rem(14px);
-  font-family: 'Gagalin-Regular';
-  margin-bottom: rem(30px); 
+  font-family: 'Gagalin';
+  margin-bottom: rem(20px); 
   
-  @include phones {
-   font-size: rem(24px);
-  }
+  // @include phones {
+  //  font-size: rem(24px);
+  // }
 }
 .review-list__text {
   margin-bottom: rem(20px);
   p {
-    font-family: 'Ubuntu Light';
-    line-height: 1.6;
+    font-weight: 300;
+    line-height: 1.75;
   }
 
-  @include phones {
-    display: none;
-   }
+  // @include phones {
+  //   display: none;
+  //  }
 }
 

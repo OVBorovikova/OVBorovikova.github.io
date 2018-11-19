@@ -26,16 +26,12 @@
   padding: rem(100px);
 }
 .team__accordeon {
-  margin-top: rem(48px);
+  margin-top: rem(42px);
 
-  @include phones {
-    margin-top: rem(30px);
-    margin-left: rem(20px);
-  }
 }
 .team__item {
-  margin-bottom: rem(37px);
-  padding-left: rem(17px);
+  margin-bottom: 34px;
+  padding-left: 17px;
 
   @include tablets {
     padding-left: 0;
@@ -48,12 +44,17 @@
   &:before {
     content: '';
     position: absolute;
-    border: rem(5px) solid transparent;	
-    border-top: rem(7px) solid $yellow;
-    margin-top:rem(5px);
-    margin-left: rem(-20px);
+    border: 5px solid transparent;	
+    border-top: 7px solid $yellow;
+    margin-top:5px;
+    margin-left: -20px;
     cursor: pointer;
-    text-align: leftж
+    text-align: left;
+
+    @include tablets {
+      margin-top:10px;
+      margin-left: 0;
+    }
   }
 
   &_active {
@@ -62,35 +63,54 @@
     &:before {
       content: '';
       position: absolute;
-      border: rem(5px) solid transparent;	
-      border-bottom: rem(7px) solid $yellow;
-      margin-top: rem(-2px);
-      margin-left: rem(-20px);
-      ccursor: pointer;
+      border: 5px solid transparent;	
+      border-bottom: 7px solid $yellow;
+      margin-top: -3px;
+      margin-left: -20px;
+      cursor: pointer;
+
+      @include tablets {
+        margin-top:2px;
+        margin-left: 0;
+      }
     }    
     .team__name {
       color:$yellow;
     }
     .team__info {
-      padding: rem(15px) 0 rem(5px);
+      padding: 20px 0 5px;
       height: 100%;
       overflow: visible;
+
+      @include tablets {
+        width: 60%;
+        margin: 0 auto;
+        padding: 15px 0 0;
+      }
+
+      @include phones {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0 0;
+      }
     }
   }
 }
 .team__name {
-  font-family: 'Gagalin-Regular';
+  font-family: 'Gagalin';
   color:#fff;
   text-transform: uppercase;
   position: relative;  
   cursor: pointer;
 
   @include tablets {
-    font-size: rem(24px);
+    font-size: rem(30px);
     display: inline-block;
+    margin-left: 20px;
   }
 }
 .team__info {
+  font-size: 14px;
   display: flex;
   align-content: space-between;
   height: 0;
@@ -101,24 +121,25 @@
   }
 }
 .team__photo {
-  width:rem(100px);
-  min-width: rem(100px);
-  height: rem(100px);
-  border-radius: rem(50px);
+  width:100px;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 50px;
   margin-right: rem(15px);
   background: center center / cover no-repeat;
 
   @include tablets {
-    margin: 0 auto rem(20px);
+    margin: 0 auto 20px;
   }
 }
+
 .team__job {
   margin-bottom: rem(15px);
-  font-family: 'Ubuntu Bold';
+  font-weight: 700;
   color:#fff;
 }
 .team__quote {
-  font-family: 'Ubuntu Light';
+  font-weight: 300;
   color:#fff;
   line-height: 1.75;
 }

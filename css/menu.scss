@@ -1,15 +1,7 @@
 .menu-section {
     background: url(../img/menu-background.jpg) center center / cover no-repeat;
-    padding: rem(110px);
+    padding: rem(90px) rem(110px);
     position: relative;
-
-    @include tablets {
-        padding: rem(100px) rem(25px);
-    }
-
-    @include phones {
-    padding: rem(50px) rem(60px);
-    }
 }
 
 .menu__accordeon {
@@ -22,7 +14,7 @@
 }
 .menu__title {  
     background: center center / cover no-repeat;  
-    width: rem(80px);
+    width: 80px;
     height: 100%;
     position: relative;
     display: flex;
@@ -38,22 +30,19 @@
     left:0;
     transform: rotate(-90deg);
     transform-origin: 0 0;
-    font-family: 'Gagalin-Regular';
-    font-size: rem(40px);  
-    line-height: 1.7;
+    font-family: 'Gagalin';
+    font-size: 40px;  
+    line-height: 1.8;
     text-transform: uppercase;
     color: #fff;
     white-space: nowrap;   
-    
-    @include phones {
-        bottom: 0;
-    }
+
 }
 .menu__desc {
     display: none;
     width: 0;
-    font-family: 'Ubuntu Light';
-    font-size: rem(14px);
+    font-weight: 300;
+    font-size: 14px;
     line-height: 1.75;
     color: #fff;
 }
@@ -66,10 +55,9 @@
         span {
             color: $yellow;
         }
-
         .menu__desc {
             width: rem(540px);
-            padding: rem(60px) rem(35px);
+            padding: 60px rem(35px);
             visibility: visible;
             display: block;
             background-color: rgba($color: $darkgray, $alpha: 0.93);

@@ -3,17 +3,17 @@ html {
   font-size: 16px;
 
   @include tablets {
-    font-size:16px;
+    font-size:13px;
   }
 
   @include phones {
-    font-size:16px;
+    font-size:11px;
   }
 }
 body {
-  font-family: 'Ubuntu Medium', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: rem(14px);
-  font-weight: normal;
+  font-weight: 500;
   line-height: 1;
   color: $darkgray;
   background-color:#f2f2f2;
@@ -21,7 +21,9 @@ body {
 .section {
   height: 100vh;
   min-height: rem(650px);
+
 }
+
 .container {
   width: 100%;
   max-width: 940px;  
@@ -36,13 +38,16 @@ body {
   }
 
   @include tablets {
-    padding: 0 20px;
+    padding: 0 rem(25px);
   }
 
   @include phones {
     padding: 0 10px;
   }
+
 }
+
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -74,7 +79,8 @@ ul {
   right:0;  
   width: 29px;
   height:14px;
-  cursor: pointer;  
+  cursor: pointer; 
+
 }
 
 input::-webkit-outer-spin-button,

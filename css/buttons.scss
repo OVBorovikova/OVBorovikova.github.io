@@ -2,7 +2,6 @@
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 13px;
-  font-weight: 500;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -42,6 +41,6 @@ button {
 
 .form__line button[type="reset"] {
   background-color: transparent;
-  font-family: 'Ubuntu Light';
+  font-weight: 300;
   color: #fff;
 }
