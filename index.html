@@ -45,7 +45,7 @@
                             </svg>
                             <img src="img/header-burger.png" alt="">
                         </div>     
-                        <div class="hero__text hero__column">                       
+                        <div class="hero__text hero__column">
                             <h1 class="title">Мы делаем</h1>
                             <div class="hero__title2">натуральные бургеры</div>
                         </div>
@@ -293,79 +293,79 @@
         <section class="section order-section">
             <div class="container">
                 <div class="title title_yellow title_centered">Закажите доставку</div>
-                <form action="" class="order-form">
+                <form class="order-form">
                     <div class="form__column">
                         <div class="form__line">
-                            <label for="name" class="form__block">
-                                <div class="form__block-title">Имя</div>
+                            <div class="form__block">
+                                <label for="name" class="form__block-title">Имя</label>
                                 <input type="text" id="name" required>
-                            </label>
+                            </div>
                         
-                            <label for="phone" class="form__block">
-                                <div class="form__block-title">Телефон</div>
-                                <input type="phone" id="phone" required>
-                            </label>
+                            <div class="form__block">
+                                <label for="tel" class="form__block-title">Телефон</label>
+                                <input type="tel" id="tel" required>
+                            </div>
                         </div>
 
                         <div class="form__line">
-                            <label for="street" class="form__block">
-                                <div class="form__block-title">Улица</div>
+                            <div class="form__block">
+                                <label for="street" class="form__block-title">Улица</label>
                                 <input type="text" id="street" required>
-                            </label>
+                            </div>
                         </div>
 
                         <div class="form__line">
-                            <label for="house" class="form__block">
-                                <div class="form__block-title">Дом</div>
+                            <div class="form__block">
+                                <label for="house" class="form__block-title">Дом</label>
                                 <input type="number" id="house" required>
-                            </label>
+                            </div>
                             
-                            <label for="block" class="form__block">
-                                <div class="form__block-title">Корпус</div>
+                            <div class="form__block">
+                                <label for="block" class="form__block-title">Корпус</label>
                                 <input type="number" id="block">
-                            </label>
+                            </div>
 
-                            <label for="flat" class="form__block  form__flat">
-                                <div class="form__block-title">Квартира</div>
+                            <div class="form__block  form__flat">
+                                <label for="flat" class="form__block-title">Квартира</label>
                                 <input type="number" id="flat">
-                            </label>
+                            </div>
 
-                            <label for="floor" class="form__block form__floor">
-                                <div class="form__block-title">Этаж</div>
+                            <div class="form__block form__floor">
+                                <label for="floor" class="form__block-title">Этаж</label>
                                 <input type="number" id="floor">
-                            </label>
+                            </div>
                         </div>
                     </div>
                     <div class="form__column">
                         <div class="form__line">
-                            <label for="comment" class="form__block">
-                                <div class="form__block-title">Комментарий</div>
+                            <div class="form__block form__block_textarea">
+                                <label for="comment" class="form__block-title">Комментарий</label>
                                 <textarea id="comment"></textarea>
-                            </label>
+                            </div>
                         </div>
 
                         <div class="form__line form__line_radio">  
-                            <label for="change" class="form__block form__block_radio"> 
+                            <div class="form__block form__block_radio"> 
                                 <input type="radio" id="change" name="payment">
                                 <span class="form__new-radio"></span>
-                                <div class="form__block-title form__radio-title">Потребуется сдача</div>
-                            </label>
+                                <label for="change" class="form__block-title form__radio-title">Потребуется сдача</label>
+                            </div>
 
-                            <label for="card" class="form__block form__block_radio"> 
+                            <div class="form__block form__block_radio"> 
                                 <input type="radio" id="card" name="payment">
                                 <span class="form__new-radio"></span>
-                                <div class="form__block-title form__radio-title">Оплата по карте</div>
-                            </label>
+                                <label for="card" class="form__block-title form__radio-title">Оплата по карте</label>
+                            </div>
                         </div>
-                        <div class="form__line">
-                            <label for="callback" class="form__block form__block_checkbox">
+                        <div class="form__line form__line_checkbox">
+                            <div class="form__block form__block_checkbox">
                                 <input type="checkbox" id="callback">
                                 <span class="form__new-checkbox"></span>
-                                <div class="form__block-title form__radio-title">Не перезванивать</div>
-                            </label>
+                                <label for="callback" class="form__block-title form__radio-title">Не перезванивать</label>
+                            </div>
                         </div>
 
-                        <div class="form__line">
+                        <div class="form__line form__line_btn">
                             <button type="submit" class="button button_red">Заказать</button>
                             <button type="reset">Очистить</button> 
                         </div>
