@@ -3,16 +3,16 @@ html {
   font-size: 16px;
 
   @include tablets {
-    font-size:13px;
+    font-size:15px;
   }
 
   @include phones {
-    font-size:11px;
+    font-size:14px;
   }
 }
 body {
   font-family: 'Ubuntu', sans-serif;
-  font-size: rem(14px);
+  font-size: rem(16px);
   font-weight: 500;
   line-height: 1;
   color: $darkgray;

@@ -96,6 +96,7 @@ input[type="radio"], input[type="checkbox"]  {
     }
   }
 }
+
 .form__radio-title {
   display: inline-block;
   vertical-align: middle;
@@ -111,6 +112,7 @@ input[type="radio"], input[type="checkbox"]  {
   border-radius: 50%;
   position: relative;
 }
+
 .form__line_radio {
   margin-top: -5px;
   margin-bottom: 7px;
@@ -118,7 +120,6 @@ input[type="radio"], input[type="checkbox"]  {
   @include phones {
     justify-content: center;
     margin-bottom: 20px;
-
   } 
 }
 
@@ -151,6 +152,7 @@ input[type="radio"]:checked + .form__new-radio:after {
     margin-bottom: 43px;
   } 
 }
+
 .form__new-checkbox {
   display: inline-block;
   vertical-align: middle;

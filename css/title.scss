@@ -1,7 +1,5 @@
 .title {
   font-family: 'Gagalin';
-  font-size: rem(72px);  
-  margin-bottom: rem(20px);
   text-transform: uppercase;
   color: $yellow;
   line-height: 1.2;
@@ -17,20 +15,59 @@
   }
 }
 
+.main__title {
+  font-size: rem(72px);
+  margin-bottom: rem(20px);
+}
 
-
-.hero-section .title {
-  font-size: 72px;
-  margin-bottom: 20px;
+.section__title {
+  font-size: rem(72px);  
+  margin-bottom: rem(20px);
 
   @include phones {
-    font-size: rem(91px);
+    font-size: rem(57px);  
   }
-
 }
+
 .best-section .title {
   margin-bottom: rem(45px);
 
+  @include tablets {
+    margin-top: rem(-100px);
+  }
+  @include phones {
+    margin-top: rem(-30px);
+    margin-bottom: rem(25px);
+  }
+}
+
+.team-section .title {
+  @include tablets {
+    margin-top: rem(110px);
+  }
+  @include phones {
+    margin-top: rem(40px);
+  }
+}
+
+.menu-section .title {
+  @include tablets {
+    margin-left: rem(-80px);
+    margin-top: rem(10px);
+   }
+  @include phones {
+   margin-left: rem(-40px);
+   margin-top: rem(-40px);
+  }
+}
+
+.order-section .title {
+  @include tablets {
+    margin-top: rem(-120px);
+   }
+   @include phones {
+    margin-top: 0;
+   }
 }
 
 

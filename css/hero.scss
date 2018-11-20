@@ -12,21 +12,23 @@
   width: 98px;
   height: 70px;  
 
-  @include phones {
-    margin-left: rem(12px);
-  }
+  // @include phones {
+  //   margin-left: rem(12px);
+  // }
 }
 .hero__menu-container {
   display: flex;   
   align-items: center;
   margin-top:rem(-5px);    
 }
+
 .hero__navigation {
   margin-right: rem(15px);
 
   @include tablets {
     display: none;
   }
+
 }
 .hero__list {
   display: flex;   
@@ -93,14 +95,15 @@
 
   @include tablets {
     width: 62%;
-    margin-top: rem(115px);
+    margin-top: rem(85px);
   }
 
   @include phones {
     width: 77%;
-    margin-top: rem(150px);
+    margin-top: rem(110px);
   }
 }
+
 .hero__svg {
   position: absolute;
   top: 0;
@@ -110,31 +113,22 @@
   margin-top: rem(-25px);
   z-index: 100;
 }
+
 .hero__text {
   margin-top: rem(60px);
 
   @include tablets {
     text-align: center;
-    width: 90%;
-    margin-top: rem(25px);
+    width: 87%;
+    margin-top: rem(30px);
   }
-
-  @include phones {
-    margin-top: rem(50px);
-    width: 100%;
-  }
-
 }
+
 .hero__title2 {
   font-family: 'Lifehack';
   font-weight: 500;
-  font-size: 65px;
+  font-size: rem(65px);
   color: #fff;  
-
-  @include phones {
-    font-size: rem(73px);
-  }
-
 }
 
 .hamburger-menu {

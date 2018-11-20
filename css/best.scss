@@ -1,6 +1,5 @@
 .best-section {
   background: url(../img/s2-background.jpg) center center / cover no-repeat;
-
 }
 
 .best__title {
@@ -24,31 +23,18 @@
   width: 33%;  
   text-align: center;
   margin-right: rem(20px);
+  margin-bottom: rem(50px);
 
   &:last-child {
     margin-right:0;
-
-    @include phones {
-      padding-top: 27px;
-     }
   }
 
   @include phones {
     display: flex;
     width: 100%;
     text-align: left;
-    padding-top: 40px;
     margin-right: 0;
    }
-}
-
-.best__text-block {
-  padding-top: 27px;
-
-  @include phones {
-    padding-top: 0;
-   }
-
 }
 
 .best__desc {
@@ -57,7 +43,9 @@
   line-height: 1.75; 
 }
 
-
+.best__icon {
+  padding-bottom: rem(27px);
+}
 .best__icon svg {
   width: 97px;
   height: 89px;

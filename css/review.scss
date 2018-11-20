@@ -1,11 +1,13 @@
 .review-section {
   background-color: black;  
 }
+
 .review-list {
   display: flex;
   flex-wrap: wrap;
   height: 100%; 
 }
+
 .review-list__item {
   width: 25%;
   height: 50%;  
@@ -26,6 +28,7 @@
     }
   }
 }
+
 .review-list__hover {
   position: absolute;
   top:0;
@@ -38,18 +41,26 @@
   transform: scale(.8);
  
   @include tablets {
+    padding: rem(30px) rem(20px);   
     text-align: center;
   }
+
+  @include phones {
+    padding: rem(50px) rem(20px);   
+  }
 }
+
 .review-list__name {
-  font-size: rem(14px);
+  font-size: 14px;
   font-family: 'Gagalin';
-  margin-bottom: rem(20px); 
+  line-height: 1.4;
+  margin-bottom: rem(15px); 
   
-  // @include phones {
-  //  font-size: rem(24px);
-  // }
+  @include phones {
+   font-size: rem(24px);
+  }
 }
+
 .review-list__text {
   margin-bottom: rem(20px);
   p {
@@ -57,8 +68,8 @@
     line-height: 1.75;
   }
 
-  // @include phones {
-  //   display: none;
-  //  }
+  @include phones {
+    display: none;
+   }
 }
 

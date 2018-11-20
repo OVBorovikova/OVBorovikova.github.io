@@ -306,14 +306,14 @@ html {
   font-size: 16px; }
   @media (max-width: 768px) {
     html {
-      font-size: 13px; } }
+      font-size: 15px; } }
   @media (max-width: 480px) {
     html {
-      font-size: 11px; } }
+      font-size: 14px; } }
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1;
   color: #2f3234;
@@ -455,8 +455,6 @@ button {
 
 .title {
   font-family: 'Gagalin';
-  font-size: 4.5rem;
-  margin-bottom: 1.25rem;
   text-transform: uppercase;
   color: #f9b43b;
   line-height: 1.2; }
@@ -467,15 +465,52 @@ button {
   .title_centered {
     text-align: center; }
 
-.hero-section .title {
-  font-size: 72px;
-  margin-bottom: 20px; }
+.main__title {
+  font-size: 4.5rem;
+  margin-bottom: 1.25rem; }
+
+.section__title {
+  font-size: 4.5rem;
+  margin-bottom: 1.25rem; }
   @media (max-width: 480px) {
-    .hero-section .title {
-      font-size: 5.6875rem; } }
+    .section__title {
+      font-size: 3.5625rem; } }
 
 .best-section .title {
   margin-bottom: 2.8125rem; }
+  @media (max-width: 768px) {
+    .best-section .title {
+      margin-top: -6.25rem; } }
+  @media (max-width: 480px) {
+    .best-section .title {
+      margin-top: -1.875rem;
+      margin-bottom: 1.5625rem; } }
+
+@media (max-width: 768px) {
+  .team-section .title {
+    margin-top: 6.875rem; } }
+
+@media (max-width: 480px) {
+  .team-section .title {
+    margin-top: 2.5rem; } }
+
+@media (max-width: 768px) {
+  .menu-section .title {
+    margin-left: -5rem;
+    margin-top: 0.625rem; } }
+
+@media (max-width: 480px) {
+  .menu-section .title {
+    margin-left: -2.5rem;
+    margin-top: -2.5rem; } }
+
+@media (max-width: 768px) {
+  .order-section .title {
+    margin-top: -7.5rem; } }
+
+@media (max-width: 480px) {
+  .order-section .title {
+    margin-top: 0; } }
 
 .hero-section {
   background: url(../img/header-background.jpg) center center/cover no-repeat; }
@@ -495,9 +530,6 @@ button {
 .hero__logo {
   width: 98px;
   height: 70px; }
-  @media (max-width: 480px) {
-    .hero__logo {
-      margin-left: 0.75rem; } }
 
 .hero__menu-container {
   display: -webkit-box;
@@ -588,11 +620,11 @@ button {
   @media (max-width: 768px) {
     .hero__burger {
       width: 62%;
-      margin-top: 7.1875rem; } }
+      margin-top: 5.3125rem; } }
   @media (max-width: 480px) {
     .hero__burger {
       width: 77%;
-      margin-top: 9.375rem; } }
+      margin-top: 6.875rem; } }
 
 .hero__svg {
   position: absolute;
@@ -608,21 +640,14 @@ button {
   @media (max-width: 768px) {
     .hero__text {
       text-align: center;
-      width: 90%;
-      margin-top: 1.5625rem; } }
-  @media (max-width: 480px) {
-    .hero__text {
-      margin-top: 3.125rem;
-      width: 100%; } }
+      width: 87%;
+      margin-top: 1.875rem; } }
 
 .hero__title2 {
   font-family: 'Lifehack';
   font-weight: 500;
-  font-size: 65px;
+  font-size: 4.0625rem;
   color: #fff; }
-  @media (max-width: 480px) {
-    .hero__title2 {
-      font-size: 4.5625rem; } }
 
 .hamburger-menu {
   display: none;
@@ -672,12 +697,10 @@ button {
 .best__item {
   width: 33%;
   text-align: center;
-  margin-right: 1.25rem; }
+  margin-right: 1.25rem;
+  margin-bottom: 3.125rem; }
   .best__item:last-child {
     margin-right: 0; }
-    @media (max-width: 480px) {
-      .best__item:last-child {
-        padding-top: 27px; } }
   @media (max-width: 480px) {
     .best__item {
       display: -webkit-box;
@@ -685,19 +708,15 @@ button {
       display: flex;
       width: 100%;
       text-align: left;
-      padding-top: 40px;
       margin-right: 0; } }
-
-.best__text-block {
-  padding-top: 27px; }
-  @media (max-width: 480px) {
-    .best__text-block {
-      padding-top: 0; } }
 
 .best__desc {
   font-weight: 300;
   font-size: 14px;
   line-height: 1.75; }
+
+.best__icon {
+  padding-bottom: 1.6875rem; }
 
 .best__icon svg {
   width: 97px;
@@ -711,20 +730,7 @@ button {
   position: relative; }
   @media (max-width: 768px) {
     .team-section {
-      text-align: center;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
+      text-align: center; } }
 
 .team__block {
   position: absolute;
@@ -959,18 +965,29 @@ button {
   transform: scale(0.8); }
   @media (max-width: 768px) {
     .review-list__hover {
+      padding: 1.875rem 1.25rem;
       text-align: center; } }
+  @media (max-width: 480px) {
+    .review-list__hover {
+      padding: 3.125rem 1.25rem; } }
 
 .review-list__name {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-family: 'Gagalin';
-  margin-bottom: 1.25rem; }
+  line-height: 1.4;
+  margin-bottom: 0.9375rem; }
+  @media (max-width: 480px) {
+    .review-list__name {
+      font-size: 1.5rem; } }
 
 .review-list__text {
   margin-bottom: 1.25rem; }
   .review-list__text p {
     font-weight: 300;
     line-height: 1.75; }
+  @media (max-width: 480px) {
+    .review-list__text {
+      display: none; } }
 
 .order-section {
   background: url(../img/order-background.jpg) center center/cover no-repeat;
