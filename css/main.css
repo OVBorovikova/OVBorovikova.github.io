@@ -313,7 +313,7 @@ html {
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   color: #2f3234;
@@ -809,7 +809,7 @@ button {
   cursor: pointer; }
   @media (max-width: 768px) {
     .team__name {
-      font-size: 1.875rem;
+      font-size: 1.75rem;
       display: inline-block;
       margin-left: 20px; } }
 
@@ -978,7 +978,7 @@ button {
   margin-bottom: 0.9375rem; }
   @media (max-width: 480px) {
     .review-list__name {
-      font-size: 1.5rem; } }
+      font-size: 24px; } }
 
 .review-list__text {
   margin-bottom: 1.25rem; }

@@ -1,6 +1,8 @@
 @function rem($px) {
   @return $px / 16px + 0rem;
+  
 }
+
 
 @mixin tablets {
   @media (max-width: $tablets) {
@@ -13,18 +15,5 @@
     @content;
   }
 }
-
-
-// @include tablets {
-//   @function rem($px) {
-//     @return $px / 13px + 0rem;
-//   }
-// }
-
-// @include phones {
-//   @function rem($px) {
-//     @return $px / 11px + 0rem;
-//   }
-// }
 
 
