@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var name = 'Ольга';
+    console.log(name);
+
+    var name = 'Друг';
+    console.log(name);
+</script>
+
+<script>
+    var name = 'Друг';
+    if (name == 'Друг') {
+      console.log('Молви Друг и войди');
+    }
+
+    var name = 'Недруг';
+    if (name == 'Друг') {
+      console.log('Молви Друг и войди');
+    }
+
+      var name = 'Недруг';
+    if (name == 'Друг') {
+      console.log('Молви Друг и войди');
+    } else {
+      console.log('Мерзкие хоббитцы');
+    }
+</script>
+
+
+<script>
+    for (var i = 0; i < 10; i++) {
+      console.log(i);
+    } 
+</script>
+
+<script>
+    function sum(p1, p2, p3) {
+      var result = p1 + p2 + p3;
+      return result;    
+    } 
+    var result1 = sum(1, 2, 3); 
+    ;
+    console.log(result1);
+
+    var result2 = sum(10, 20, 30);
+    console.log(result2);
+  
+</script>
+
+<script>
+    var array = ['Привет', 'loftschool'];
+
+    array.push('я изучаю', 'javascript');
+    
+    console.log(array.length);
+
+    for (var i = 0; i < array.length; i++) {
+      console.log(array[i]);
+    }
+</script>
+
+
+<script>
+    var array = [1, 1000, 10, 2000, 300, 3, 2, 50, 60, 500];
+
+    for (i = 0; i < array.length; i++) {
+      if (array[i] > 100) {
+        console.log(array[i]);
+      }
+    }
+</script>
+
+
+<script>
+    var obj = {
+      name: 'Ольга',
+      lastName: 'Боровикова',
+      age: 29
+    }
+    console.log(obj.name);
+    console.log(obj.lastName);
+    console.log(obj.age);
+
+    obj.city = 'Москва';
+
+    console.log(obj['city']);
+</script>
+
+
+<script>
+  var obj = {
+      name: 'Ольга',
+      lastName: 'Боровикова',
+      age: 29
+    }
+
+  function hello(human) {
+    console.log('Привет, меня зовут ' + obj.name + ' ' + obj.lastName + ' и мне ' + obj.age + ' лет');
+  }
+
+  hello(obj);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <main></main>
+  
+  <!-- Задания 1-3  -->
+  <script>
+    const element1 = document.createElement('div');
+    const container1 = document.querySelector('main');
+
+    container1.appendChild(element1);
+    element1.textContent = 'Этот элемент создан при помощи DOM API';
+
+
+    const element2 = document.createElement('div');
+
+    element1.appendChild(element2);
+    element2.className = 'inner';
+    element2.textContent = 'Этот элемент тоже создан при помощи DOM API';
+
+    element2.style.color = 'red';
+
+</script>
+
+
+<!-- Задание 4 -->
+
+<script>
+    const element4 = document.createElement('div');
+    const container4 = document.querySelector('main');
+
+    container4.appendChild(element4);
+    element4.textContent = 'Этот элемент создан при помощи DOM API';
+
+    element4.addEventListener('click', function() {
+      console.log('Этот текст говорит о том, что я всё сделал правильно');
+    });
+</script>
+
+<!-- Задание 5 -->
+
+<script>
+    const element5 = document.createElement('a');
+
+    document.body.appendChild(element5);
+    element5.textContent = 'www.loftschool.com';
+    element5.setAttribute('href', 'https://loftschool.com');
+    element5.addEventListener('click', function(e) {
+
+      var link = element5.getAttribute('href');
+
+      console.log('Я кликнул на ссылку ' + link);
+      e.preventDefault();
+    });  
+</script>
+
+<br />
+
+<!-- Задание 6 -->
+
+<script>
+  const input6 = document.createElement('input');
+  const btn6 = document.createElement('button');
+
+  document.body.appendChild(input6);
+  document.body.appendChild(btn6);
+
+  btn6.textContent = 'Кнопка';  
+  
+  input6.addEventListener('keydown', function(e) {
+      btn6.addEventListener('click', function(content){
+          var content = e.key;       
+          console.log(content);  
+      });      
+  }); 
+</script>
+
+
+
+</body>
+</html>
