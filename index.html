@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mr. Burger</title>    
-    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />    
 </head>
 <body>
     <div class="wrapper">
@@ -15,7 +15,7 @@
                     <svg class="hero__logo">
                         <use xlink:href="img/icons-sprite.svg#logo"></use>
                     </svg>
-                    <div class="hero__menu-container hero__menu-container_active">
+                    <div class="hero__menu-container">
                         <nav class="hero__navigation">
                             <ul class="hero__list">
                                 <li><a href="#" class="hero__link">О нас</a></li>
@@ -27,13 +27,15 @@
                                 <li><a href="#" class="hero__link">Контакты</a></li>
                             </ul>
                         </nav>
-                        <a class="button button_red">
+                        <a href="#" class="button button_red">
                             Заказать
-                        </a>  
-                        <a class="hamburger-menu">
+                        </a> 
+                        <div class="hamburger-menu" id="hamburger-menu">
                             <span></span>
                             <span></span>
                             <span></span>
+                        </div> 
+                        <a href="#" class="hamburger-close" id="hamburger-close">
                         </a>  
                     </div>         
                 </header>
@@ -58,106 +60,226 @@
         </section>
         <main>        
             <section class="section best-section">
-            <div class="container">
-                <div class="title section__title title_black title_centered">
-                    Мы лучшие
-                </div>
-                <div class="best__container">
-                    <div class="best__item">
-                        <div class="best__icon">
-                            <svg class="best__icon_meat">
-                                <use xlink:href="img/icons-sprite.svg#meat"></use>
-                            </svg>
-                        </div>   
-                        <div class="best__text-block">              
-                            <div class="best__title">100% свежее мясо</div>
-                            <div class="best__desc">
-                                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="best__item">
+                <div class="container">
+                    <h2 class="title section__title title_black title_centered">
+                        Мы лучшие
+                    </h2>
+                    <div class="best__container">
+                        <div class="best__item">
                             <div class="best__icon">
-                                <svg class="best__icon_hand">
-                                    <use xlink:href="img/icons-sprite.svg#hand"></use>
+                                <svg class="best__icon_meat">
+                                    <use xlink:href="img/icons-sprite.svg#meat"></use>
+                                </svg>
+                            </div>   
+                            <div class="best__text-block">              
+                                <div class="best__title">100% свежее мясо</div>
+                                <div class="best__desc">
+                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="best__item">
+                                <div class="best__icon">
+                                    <svg class="best__icon_hand">
+                                        <use xlink:href="img/icons-sprite.svg#hand"></use>
+                                    </svg> 
+                                </div>
+                                <div class="best__text-block"> 
+                                    <div class="best__title">Ручная сборка</div>
+                                    <div class="best__desc">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="best__item">
+                            <div class="best__icon">
+                                <svg class="best__icon_natural">
+                                    <use xlink:href="img/icons-sprite.svg#natural"></use>
                                 </svg> 
                             </div>
                             <div class="best__text-block"> 
-                                <div class="best__title">Ручная сборка</div>
+                                <div class="best__title">Натуральные ингредиенты</div>
                                 <div class="best__desc">
-                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
-                                </div>
-                            </div>
-                    </div>
-                    <div class="best__item">
-                        <div class="best__icon">
-                            <svg class="best__icon_natural">
-                                <use xlink:href="img/icons-sprite.svg#natural"></use>
-                            </svg> 
-                        </div>
-                        <div class="best__text-block"> 
-                            <div class="best__title">Натуральные ингредиенты</div>
-                            <div class="best__desc">
-                                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section team-section">
-            <div class="container">
-                <div class="team__block">
-                    <div class="team__content">
-                        <div class="title section__title">Команда</div>
-                        <div class="team__accordeon">
-                            <div class="team__item">
-                                <div class="team__name">Дэниэл Редклиф</div>
-                                <div class="team__info">
-                                    <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
-                                    <div class="team__text">
-                                        <div class="team__job">Оператор</div>
-                                        <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team__item team__item_active">
-                                <div class="team__name">Ричард Джеймс</div>
-                                <div class="team__info">
-                                    <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
-                                    <div class="team__text">
-                                        <div class="team__job">Оператор</div>
-                                        <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team__item">
-                                <div class="team__name">Джейк Финн</div>
-                                <div class="team__info">
-                                    <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
-                                    <div class="team__text">
-                                        <div class="team__job">Оператор</div>
-                                        <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team__item">
-                                <div class="team__name">Николай Иванов</div>
-                                <div class="team__info">
-                                    <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
-                                    <div class="team__text">
-                                        <div class="team__job">Оператор</div>
-                                        <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
-                                    </div>
+                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="section burgers-section">
+                <div class="container">
+                    <div class="burgers__slider">
+                        <a href="#" class="burgers__arrow arrow-left" id="arrow-left">
+                            <svg>
+                                <use xlink:href="img/icons-sprite.svg#arrow-scroll"></use>
+                            </svg>
+                        </a>
+                        <div class="burgers__item">
+                            <div class="burgers__item-col burgers__img">
+                                <div class="burgers__composition-container">
+
+                                    <div class="burgers__composition" id="burger-btn">
+                                        <svg class="burgers__composition-img">
+                                            <use xlink:href="img/icons-sprite.svg#burger"></use>
+                                        </svg>
+                                        <div class="burgers__composition-title">
+                                            состав
+                                        </div>
+                                    </div>
+
+                                    <div class="burgers__composition-content">
+                                            <a href="#" class="burgers-close" id="burgers-close">
+                                                </a>
+                                        <div class="burgers__composition-table">
+                                           
+                                            <div class="burgers__line">
+                                                <div class="burgers__icon">
+                                                        <svg>
+                                                            <use xlink:href="img/icons-sprite.svg#beef"></use>
+                                                        </svg>
+                                                </div>
+                                                <div class="burgers__product">Говядина</div>
+                                                <div class="burgers__product-weight">300 г</div>
+                                            </div>
+                                            <div class="burgers__line">
+                                                <div class="burgers__icon">
+                                                        <svg>
+                                                            <use xlink:href="img/icons-sprite.svg#buns"></use>
+                                                        </svg>
+                                                </div>
+                                                <div class="burgers__product">Булочки</div>
+                                                <div class="burgers__product-weight">100 г</div>
+                                            </div>
+                                            <div class="burgers__line">
+                                                <div class="burgers__icon">
+                                                        <svg>
+                                                            <use xlink:href="img/icons-sprite.svg#salad"></use>
+                                                        </svg>
+                                                </div>
+                                                <div class="burgers__product">Зелень</div>
+                                                <div class="burgers__product-weight">70 г</div>
+                                            </div>
+                                            <div class="burgers__line">
+                                                <div class="burgers__icon">
+                                                        <svg>
+                                                            <use xlink:href="img/icons-sprite.svg#sause"></use>
+                                                        </svg>
+                                                </div>
+                                                <div class="burgers__product">Соус</div>
+                                                <div class="burgers__product-weight">150 г</div>
+                                            </div>
+                                            <div class="burgers__line">
+                                                <div class="burgers__icon">
+                                                        <svg>
+                                                            <use xlink:href="img/icons-sprite.svg#cucumber"></use>
+                                                        </svg>
+                                                </div>
+                                                <div class="burgers__product">Овощи</div>
+                                                <div class="burgers__product-weight">200 г</div>
+                                            </div>
+                                            <div class="burgers__line">
+                                                <div class="burgers__icon">
+                                                        <svg>
+                                                            <use xlink:href="img/icons-sprite.svg#cheese"></use>
+                                                        </svg>
+                                                </div>
+                                                <div class="burgers__product">Сыр</div>
+                                                <div class="burgers__product-weight">80 г</div>
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </div>
+
+                                <img src="img/slider-1.png" alt=""> 
+                                <div class="burgers__kkal">
+                                    <div class="burgers__kkal-img">
+                                        <svg>
+                                            <use xlink:href="img/icons-sprite.svg#kkal"></use>
+                                        </svg>
+                                        <div class="burgers__kkal-number">1200</div>
+                                    </div>
+                                    <div class="burgers__kkal-title">
+                                        ккал
+                                    </div>
+                                </div>
+                                
+                                </div>
+                                <div class="burgers__item-col burgers__info">
+                                    <h2 class="section__title title title_white">Dark BEEF Burger</h2>
+                                    <div class="burgers__desc">
+                                            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </div>
+                                    <div class="burgers__order">
+                                        <div class="burgers__price">
+                                            <div class="burgers__price_number">500</div>
+                                            <div>рублей</div>
+                                        </div>
+                                        <div class="button burgers__button">Заказать</div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <a href="#" class="burgers__arrow arrow-right" id="arrow-right">
+                                <svg>
+                                    <use xlink:href="img/icons-sprite.svg#arrow-scroll"></use>
+                                </svg>
+                            </a>
+                    </div>
+                </div>
+            </section>
+            <section class="section team-section">
+                <div class="container">
+                    <div class="team__block">
+                        <div class="team__content">
+                            <h2 class="title section__title">Команда</h2>
+                            <div class="team__accordeon">
+                                <div class="team__item">
+                                    <div class="team__name">Дэниэл Редклиф</div>
+                                    <div class="team__info">
+                                        <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
+                                        <div class="team__text">
+                                            <div class="team__job">Оператор</div>
+                                            <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__item team__item_active">
+                                    <div class="team__name">Ричард Джеймс</div>
+                                    <div class="team__info">
+                                        <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
+                                        <div class="team__text">
+                                            <div class="team__job">Оператор</div>
+                                            <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__item">
+                                    <div class="team__name">Джейк Финн</div>
+                                    <div class="team__info">
+                                        <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
+                                        <div class="team__text">
+                                            <div class="team__job">Оператор</div>
+                                            <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__item">
+                                    <div class="team__name">Николай Иванов</div>
+                                    <div class="team__info">
+                                        <div class="team__photo" style="background-image: url(img/team-photo-1.jpg)"></div>
+                                        <div class="team__text">
+                                            <div class="team__job">Оператор</div>
+                                            <div class="team__quote">С радостью поможет подобрать идеальный бургер и оформить заказ.  </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         <section class="section menu-section">
-            <div class="title title_white section__title">Меню</div>
+            <h2 class="title title_white section__title">Меню</h2>
             <ul class="menu__accordeon">
                 <li class="menu__item">
                     <div class="menu__title" style="background-image: url(img/menu-1.jpg)">
@@ -292,7 +414,7 @@
         </section>    
         <section class="section order-section">
             <div class="container">
-                <div class="title title_yellow title_centered section__title">Закажите доставку</div>
+                <h2 class="title title_yellow title_centered section__title">Закажите доставку</h2>
                 <form class="order-form">
                     <div class="form__column">
                         <div class="form__line">
@@ -443,6 +565,6 @@
         </ul>
     </div>
     
-   
+    <script src="js/script.js"></script>
 </body>
 </html>
