@@ -70,6 +70,21 @@
    }
 }
 
+.burgers-section .title {
+  line-height: 0.9;
+  margin-bottom: rem(50px);
+  margin-top: rem(-20px);
+  
+  @include tablets {
+    text-align: center;
+    margin-bottom: rem(50px);
+  }
+
+  @include phones {
+    margin-bottom: rem(30px);
+   }
+}
+
 
 
 
