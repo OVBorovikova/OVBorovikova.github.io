@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // задание 1
+
+     
+      var result = [];
+
+          function filter(input, than) {  
+            for (i=0; i < input.length; i++){     
+           
+              if (input[i] > than) {              
+               result.push(input[i]) ;
+              }; 
+            };
+            return result;    
+           }
+
+
+      var array = [12, 100, 34, 65, 10];
+      var result = filter(array, 60);
+
+      console.log(result); // [100, 65];
+
+      result = filter(array, 20);      
+      console.log(result); // [100, 34, 65];
+
+
+      
+      
+      
+      
+    // задание 2
+
+     
+      var result = [];
+
+      function filter(input, than) {  
+          if (input.length == 0) {
+            throw new Error('Передан пустой массив');
+          };
+
+          for (i=0; i < input.length; i++) {     
+              if (!isFinite(input[i])) {
+                throw new Error(input[i] + ' не является числом');
+              } else if (input[i] < 0) {
+                throw new Error(input[i] + ' является отрицательным числом');
+              } 
+              if (input[i] > than) {              
+                result.push(input[i]) ;
+              };
+              
+        }
+        return result; 
+    }
+      
+    try {
+      var array = [12, 100, 34, 65, 10];
+      var result = filter(array, 60);
+
+      console.log(result); // [100, 65];
+
+      result = filter(array, 20);      
+      console.log(result); // [100, 34, 65];
+
+    } catch (e) {
+      console.log(e.message);
+    } 
+    </script>
+</body>
+</html>
+
