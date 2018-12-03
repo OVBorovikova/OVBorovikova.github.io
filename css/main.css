@@ -1362,7 +1362,8 @@ button {
   line-height: 1.8;
   text-transform: uppercase;
   color: #fff;
-  white-space: nowrap; }
+  white-space: nowrap;
+  pointer-events: none; }
 
 .menu__desc {
   display: none;
@@ -1500,7 +1501,7 @@ button {
 .order-form textarea {
   height: 110px; }
 
-.order-form input,
+input,
 .order-form textarea {
   width: 100%;
   border: 1px solid #fff;
@@ -1509,10 +1510,13 @@ button {
   color: #2f3234;
   padding: 8px 20px;
   background: #fff; }
-  .order-form input:focus,
+  input:focus,
   .order-form textarea:focus {
     outline: none;
     border: 1px solid #f9b43b; }
+
+.order-form .form__error {
+  border: 1px solid red; }
 
 .form__block-title {
   display: block;
