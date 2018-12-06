@@ -23,7 +23,7 @@ body {
   min-height: rem(650px);
 
   @include phones {
-    min-height: rem(600px);
+    min-height: 100vh;
   }
 }
 

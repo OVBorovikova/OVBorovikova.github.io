@@ -39,7 +39,7 @@ display: block;
     margin-top: rem(-100px);
   }
   @include phones {
-    margin-top: rem(-30px);
+    margin-top: rem(30px);
     margin-bottom: rem(25px);
   }
 }
@@ -76,7 +76,6 @@ display: block;
 .burgers-section .title {
   line-height: 0.9;
   margin-bottom: rem(45px);
-  // margin-top: rem(-20px);
   
   @include tablets {
     text-align: center;

@@ -324,7 +324,7 @@ body {
   min-height: 40.625rem; }
   @media (max-width: 480px) {
     .section {
-      min-height: 37.5rem; } }
+      min-height: 100vh; } }
 
 .container {
   width: 100%;
@@ -494,7 +494,7 @@ button {
       margin-top: -6.25rem; } }
   @media (max-width: 480px) {
     .best-section .title {
-      margin-top: -1.875rem;
+      margin-top: 1.875rem;
       margin-bottom: 1.5625rem; } }
 
 @media (max-width: 768px) {
