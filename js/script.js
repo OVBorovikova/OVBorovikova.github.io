@@ -1,4 +1,5 @@
 //верхнее меню
+
 const openBtn = document.querySelector('#hamburger-menu');
 const closeBtn = document.querySelector('#hamburger-close');
 const container = document.querySelector('.hero__menu-container');
@@ -29,62 +30,60 @@ function contentShow(i){
   return function (e) {
     burgerCont[i].classList.toggle("burgers__composition-content_opened");
   };
-}
+};
 
 function contentHide(i){
   return function (e) {  
     e.preventDefault();  
     burgerCont[i].classList.remove("burgers__composition-content_opened");
   };
-}
-
+};
 
 //слайдер
 
-    var leftArrow = document.querySelector('#arrow-left');
-    var rightArrow = document.querySelector('#arrow-right');
-    var sliderContainer = document.querySelector('.burgers__slider');
-    var sliderItems = document.querySelectorAll('.burgers__item');
-    var sliderWidth = sliderContainer.offsetWidth; 
-    var index = 0;
+  var leftArrow = document.querySelector('#arrow-left');
+  var rightArrow = document.querySelector('#arrow-right');
+  var sliderContainer = document.querySelector('.burgers__slider');
+  var sliderItems = document.querySelectorAll('.burgers__item');
+  var sliderWidth = sliderContainer.offsetWidth; 
+  var index = 0;
 
-    rightArrow.addEventListener("click", function(e) {
-        e.preventDefault();   
-        index = index + 1;
-        
-          if (index > sliderItems.length - 1) {
-              for (i = 0; i < sliderItems.length; i++) {
-                index = sliderItems.length - 1;            
-              };
-          } else {  
-              for (i = 0; i < sliderItems.length; i++) {
-                var sliderData = getComputedStyle(sliderItems[i]);  
-                var itemInt = parseInt(sliderData.right);
-                sliderItems[i].style.right = itemInt + sliderWidth + 'px';
-               };
-          };
-    });
-
-    leftArrow.addEventListener("click", function(e) {
-      e.preventDefault();   
-      index = index - 1;
-     
-      if (index < 0) {
-            for (i = 0; i < sliderItems.length - 1; i++) {
-              index = 0;      
-            };
-        } else {  
-            for (i = 0; i < sliderItems.length; i++) {
-              var sliderData = getComputedStyle(sliderItems[i]);  
-              var itemInt = parseInt(sliderData.right);
-              sliderItems[i].style.right = itemInt - sliderWidth + 'px';
-            };
+  rightArrow.addEventListener("click", function(e) {
+    e.preventDefault();   
+    index = index + 1;
+    
+    if (index > sliderItems.length - 1) {
+        for (i = 0; i < sliderItems.length; i++) {
+          index = sliderItems.length - 1;            
         };
+    } else {  
+        for (i = 0; i < sliderItems.length; i++) {
+          var sliderData = getComputedStyle(sliderItems[i]);  
+          var itemInt = parseInt(sliderData.right);
+          sliderItems[i].style.right = itemInt + sliderWidth + 'px';
+          };
+      };
+  });
+
+  leftArrow.addEventListener("click", function(e) {
+    e.preventDefault();   
+    index = index - 1;
+    
+    if (index < 0) {
+          for (i = 0; i < sliderItems.length - 1; i++) {
+            index = 0;      
+          };
+      } else {  
+          for (i = 0; i < sliderItems.length; i++) {
+            var sliderData = getComputedStyle(sliderItems[i]);  
+            var itemInt = parseInt(sliderData.right);
+            sliderItems[i].style.right = itemInt - sliderWidth + 'px';
+          };
+      };
   });
 
   
   //горизонтальный аккордеон -- меню
-
 
   const accordeonMenu = document.querySelector('#menu-accordeon');
 
@@ -112,39 +111,37 @@ function contentHide(i){
         };       
       };
     });
-  }
+  };
 
 
 //вертикальный аккордеон -- команда
 
 const accordeonTeam = document.querySelector('#team-accordeon');
 
-  crateTeamAccordeon(accordeonTeam);
+crateTeamAccordeon(accordeonTeam);
 
-  function crateTeamAccordeon(element) {
-    let activeItem;
+function crateTeamAccordeon(element) {
+  let activeItem;
 
-    element.addEventListener('click', function (event) {
-      if(event.target.classList.contains('team__name')) {
-        const title = event.target;  
-        currentParent = title.parentNode; 
+  element.addEventListener('click', function (event) {
+    if(event.target.classList.contains('team__name')) {
+      const title = event.target;  
+      currentParent = title.parentNode; 
 
-        if (currentParent.classList.contains('team__item_active')) {
-          currentParent.classList.remove('team__item_active');
-          activeItem = null;
-        } else {
-          if (activeItem) {
-            activeItem.classList.remove('team__item_active');
-          }      
-  
-          activeItem = title.parentNode;
-          activeItem.classList.add('team__item_active'); 
+      if (currentParent.classList.contains('team__item_active')) {
+        currentParent.classList.remove('team__item_active');
+        activeItem = null;
+      } else {
+        if (activeItem) {
+          activeItem.classList.remove('team__item_active');
+        }  
 
-        };       
-      };
-    });
-  }
-
+        activeItem = title.parentNode;
+        activeItem.classList.add('team__item_active'); 
+      };       
+    };
+  });
+};
 
 
 // модальное окно -- отзыв
@@ -204,7 +201,6 @@ function openreview(element) {
       }
     }
   };
-
 };
 
 
@@ -221,62 +217,69 @@ formButton.addEventListener('click', function(e) {
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/');
     xhr.send(formData);
 
     xhr.addEventListener('load', function (e) {
       if (xhr.status < 400) {
-
-        console.log('все ок');
-
-        const templateForm = document.querySelector("#formOverlayTemplate").innerHTML;
-        const overlayForm = createFormOverlay(templateForm);
-
-        fragment = null;
-     
-          e.preventDefault();
-          document.body.style.overflow = 'hidden';
-          overlayForm.open();
-          overlayForm.setText("Сообщение отправлено");
-
-
-        function createFormOverlay(templateForm) {
-          let fragmentForm = document.createElement('div');
-
-          fragmentForm.innerHTML = templateForm;
-
-          const overlayFormElem = fragmentForm.querySelector('.overlay');
-          const overlayFormClose = fragmentForm.querySelector('.form-overlay__close');
-          const overlayFormText = fragmentForm.querySelector('.overlay__text');
-
-          overlayFormElem.addEventListener('click', function(e) {
-              if (e.target === overlayFormElem) {
-                overlayFormClose.click();
-              }
-          });
-          overlayFormClose.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.body.removeChild(overlayFormElem);
-            document.body.style.overflow = 'auto';
-          });
-
-          return {
-            open() {
-              document.body.appendChild(overlayFormElem)
-            },    
-            close() {
-              overlayClose.click();
-            },
-            setText(content) {
-              overlayFormText.innerHTML = content;
-            }
-          }
-        };
-      }
+        
+       if (xhr.response == null) {
+        showMessage(e);
+       } else {
+        alert(xhr.response.message);
+       };
+      };
     });
   };
-
 });
+
+function showMessage(e) {
+  const templateForm = document.querySelector("#formOverlayTemplate").innerHTML;
+  const overlayForm = createFormOverlay(templateForm);
+
+  fragment = null;
+
+  e.preventDefault();
+  document.body.style.overflow = 'hidden';
+  overlayForm.open();
+  overlayForm.setText("Сообщение отправлено");
+
+
+  function createFormOverlay(templateForm) {
+    let fragmentForm = document.createElement('div');
+
+    fragmentForm.innerHTML = templateForm;
+
+    const overlayFormElem = fragmentForm.querySelector('.overlay');
+    const overlayFormClose = fragmentForm.querySelector('.form-overlay__close');
+    const overlayFormText = fragmentForm.querySelector('.overlay__text');
+
+    overlayFormElem.addEventListener('click', function(e) {
+        if (e.target === overlayFormElem) {
+          overlayFormClose.click();
+        }
+    });
+    overlayFormClose.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.removeChild(overlayFormElem);
+      document.body.style.overflow = 'auto';
+    });
+
+    return {
+      open() {
+        document.body.appendChild(overlayFormElem)
+      },    
+      close() {
+        overlayClose.click();
+      },
+      setText(content) {
+        overlayFormText.innerHTML = content;
+      }
+    };
+  };  
+};
+    
+
 
 function validateForm(form) {
 
